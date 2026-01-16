@@ -96,6 +96,7 @@ class _LoginPageState extends State<LoginPage> {
             _loginFormKey.currentState?.save();
             bool result = await AuthService().login(username!, password!);
             if (result) {
+              Navigator.pushReplacementNamed(context, '/home');;
             } else {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
