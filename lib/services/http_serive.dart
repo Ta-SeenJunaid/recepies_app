@@ -40,4 +40,14 @@ class HttpService {
       return e.response; // 🔑 THIS IS THE KEY
     }
   }
+
+  Future<Response?> get(String path) async {
+    try {
+      final response = await _dio.get(path);
+      return response;
+    } catch (e) {
+      print(e);
+    }
+    return null;
+  }
 }
