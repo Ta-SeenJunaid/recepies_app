@@ -39,6 +39,17 @@ class _HomePageState extends State<HomePage> {
             child: FilledButton(
               onPressed: () {
                 setState(() {
+                  _mealTypeFilter = ""; // Reset the filter
+                });
+              },
+              child: const Text("🍽️ All"),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: FilledButton(
+              onPressed: () {
+                setState(() {
                   _mealTypeFilter = "snack";
                 });
               },
